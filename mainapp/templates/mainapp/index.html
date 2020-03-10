@@ -1,0 +1,32 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block menu_catalog %}
+    <div>
+        <h2 class="hello">Вас приветствует магазин компьютерной техники "Гаджетсы"</h2>
+    </div>
+    <div class="hot_product_catalog">
+        <h4 class="product">{{ hot_product.name }}</h4>
+        <a class="link" href="/media/{{ hot_product.image }}" target="_blank">
+            <img class="image_border_product" src="/media/{{ hot_product.image }}" alt="hot_product">
+        </a>
+        <div class="desc_hot">
+            <p>{{ hot_product.short_desc }}</p>
+            <p style="font-weight: 600;">Подробное описание товара</p>
+            <p>{{ hot_product.description }}</p>
+        </div>
+        <div class="hot_product__bottom">
+            <p class="h4_hot">Горячее предложение</p>
+            <p>Цена :{{ hot_product.price }}</p>
+            <a class="link_hot" href="{% url 'basket:add' hot_product.pk %}">
+                Заказать
+            </a>
+        </div>
+    </div>
+
+
+
+<div>
+
+</div>
+{% endblock %}

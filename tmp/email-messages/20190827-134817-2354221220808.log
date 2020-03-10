@@ -1,0 +1,17 @@
+﻿Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IHZhZ181?=
+From: django@geekshop.local
+To: vag_5@mail.dj
+Date: Tue, 27 Aug 2019 10:48:17 -0000
+Message-ID: <156690289746.9528.8225266095849401318@DESKTOP-U09KKIS>
+
+
+Для подтверждения учетной записи vag_5     
+на портале http://localhost:8000 перейдите по ссылке:
+
+http://localhost:8000/auth/verify/vag_5@mail.dj/8de2e414f0b42ab17802dac8a10ad3fe85d7a146/
+-------------------------------------------------------------------------------

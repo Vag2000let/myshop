@@ -1,0 +1,27 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block note %}
+{% include 'mainapp/includes/inc__main_catalog.html' %}
+<div class="hot_product_catalog">
+    <h4 class="product">{{ product.name }}</h4>
+    <a class="link" href="/media/{{ product.image }}" target="_blank">
+        <img class="image_border_product" src="/media/{{ product.image }}">
+    </a>
+    <div class="product_card">
+        <p>{{ product.short_desc }}</p>
+        <p style="font-weight: 600;">Подробное описание товара</p>
+        <p>{{ product.description }}</p>
+    </div>
+
+    <div class="hot_product__bottom">
+      <p>Цена :{{ product.price }}</p>
+       <div class="product_button">
+            <a class="by" href="{% url 'basket:add' product.pk %}">
+                Заказать
+            </a>
+       </div>
+    </div>
+</div>
+
+{% endblock %}

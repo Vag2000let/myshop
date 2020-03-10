@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {% block title %}
+                {{ page_title|title }}
+            {% endblock %}
+        </title>
+        {% block css %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        {% endblock %}
+    </head>
+    <body>
+        <div class="admin_container">
+            <div class="user_basket">
+                Админка
+            </div>
+            {% block menu %}
+                <div class="admin_menu">
+                    <ul class="menu">
+                        <li style="list-style-type: none;">
+                            <a class="link_catalog" href="{% url 'main:index' %}">
+                                на сайт
+                            </a>
+                        </li>
+                        <li style="list-style-type: none;">
+                            <a class="link_catalog" href="{% url 'myadmin:index' %}">
+                                пользователи
+                            </a>
+                        </li>
+                        <li style="list-style-type: none;">
+                            <a href="{% url 'myadmin:productcategory_list' %}"
+                                class="{% if request.resolver_match.namespace == 'myadmin' or productcategory.name %}link_catalog{% endif %}">
+                                категории{% if productcategory %}: <span>{{ productcategory.name }}</span>{% endif %}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            {% endblock %}
+
+            {% block container %}
+
+            {% endblock %}
+        </div>
+    </body>
+</html>

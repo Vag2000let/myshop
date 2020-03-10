@@ -1,0 +1,42 @@
+{% extends 'mainapp/base.html' %}
+
+{% load static %}
+
+{# Для кеширования#}
+{% block notebook %}
+
+{% include 'mainapp/includes/inc__main_catalog.html' %}
+
+<p class="category" >{{ category.name|title }}</p>
+<div class="paginator">
+    {% if category_products.has_previous %}
+        <a href="{% url 'main:category_paginator' category.pk category_products.previous_page_number %}">
+            <
+        </a>
+    {% endif %}
+    <span class="current">
+        страница {{ category_products.number }} из {{ category_products.paginator.num_pages }}
+    </span>
+    {% if category_products.has_next %}
+        <a href="{% url 'main:category_paginator' category.pk category_products.next_page_number %}">
+            >
+        </a>
+    {% endif %}
+
+</div>
+
+<div class="note_book">
+    {% for product in category_products %}
+        <div class="products">
+            <a href="{% url 'main:product' product.pk %}" class="link">
+                <img class="image_border" src="/media/{{ product.image }}" alt="{{ product.short_desc }}"
+                     title={{ product.name }}>
+                <h4 class="h4">{{ product.name }}</h4>
+                <p class="main_2">{{ product.description }}</p>
+                <p class="main_2">цена : {{ product.price }}</p>
+                <p class="main_2">на складе : {{ product.quantity }}</p>
+            </a>
+        </div>
+    {% endfor%}
+</div>
+{% endblock %}

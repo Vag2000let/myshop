@@ -1,0 +1,27 @@
+{% load static %}
+
+<div class="style_catalog">
+
+{# прописываем request.resolver_match.namespace или#}
+{# request.resolver_match.url_name в зависимости от того что есть #}
+{# пространство имен или нет. Если нет то url_name.#}
+
+    <ul class="menu_catalog">
+        <li class="li_main_1">
+            <a href="{% url 'main:category' 0 %}"
+               class="{% if request.resolver_match.url_name == 'main' %}
+               link_catalog{% endif %}">
+                Все
+            </a>
+        </li>
+        {% for category in main_catalog %}
+            <li class="li_main_1">
+                <a href="{% url 'main:category' category.pk %}"
+                   class="{% if request.resolver_match.namespace == 'main' %}
+                   link_catalog{% endif %}">
+                    {{ category.name }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

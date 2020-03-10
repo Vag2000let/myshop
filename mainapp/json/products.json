@@ -1,0 +1,83 @@
+[
+  {
+    "category": "ноутбуки",
+    "name": "ASUS FX504GD TUF Gaming (E4095)",
+    "image": "products_images/asus_fx504gd.jpg",
+    "short_desc": "Подлинно геймерский! Безупречно надежный!",
+    "description": "лучшие в своем роде",
+    "price": "70500.5",
+    "quantity": "12"
+  },
+  {
+    "category": "ноутбуки",
+    "name": "ASUS GL704GW ROG Strix SCAR II",
+    "image": "products_images/asus_gl704gw_rog.jpg",
+    "short_desc": "Ноутбук ROG Strix SCAR II – это идеальное оружие для метких стрелков!!",
+    "description": "для нереальных сражений",
+    "price": "95000.8",
+    "quantity": "7"
+  },
+  {
+    "category": "ноутбуки",
+    "name": "Dell Alienware 17 Silver (A17-7073)",
+    "image": "products_images/dell_alienware_17_Silver.jpg",
+    "short_desc": "РАЗРАБОТАН, ЧТОБЫ КРУШИТЬ ВСЕ И ВСЯ",
+    "description": "ноутбук с разрушительной силой!",
+    "price": "101000.0",
+    "quantity": "5"
+  },
+  {
+    "category": "мобильные телефоны",
+    "name": "Смартфон Meizu 15 64Gb Black",
+    "image": "products_images/Meizu_15_64Gb_Black.jpg",
+    "short_desc": "компактный и вместительный",
+    "description": "смартфон на платформе Android, поддержка двух SIM-карт, экран 5.46",
+    "price": "21950.0",
+    "quantity": "32"
+  },
+  {
+    "category": "мобильные телефоны",
+    "name": "Смартфон Xiaomi Mi 8 6/128Gb Black",
+    "image": "products_images/Xiaomi_Mi_8_6_128Gb_Black.jpg",
+    "short_desc": "идеальное сооношение цены и качества!",
+    "description": "смартфон с Android 8.1, поддержка двух SIM-карт, экран 6.21\", разрешение 2248x1080",
+    "price": "26040.0",
+    "quantity": "65"
+  },
+  {
+    "category": "мобильные телефоны",
+    "name": "Смартфон Samsung Galaxy S10+ 1Tb Ceramic Black (SM-G975F)",
+    "image": "products_images/Samsung_Galaxy_S10+_1Tb_Ceramic_Black.jpg",
+    "short_desc": "идеальное сооношение цены и качества!",
+    "description": "смартфон с Android 9.0, поддержка двух SIM-карт, экран 6.4\"",
+    "price": "110210.0",
+    "quantity": "16"
+  },
+  {
+    "category": "мониторы",
+    "name": "Монитор Samsung 49\" C49HG90DMI",
+    "image": "products_images/Samsung_49_C49HG90DMI.jpg",
+    "short_desc": "Ваши глаза скажут спасибо",
+    "description": "48.9\", VA, UltraWide, LED, 3840x1080, 1 мс, 144 Гц, AMD FreeSync, 3000:1, 178°/178°, 2xHDMI, DisplayPort, Mini DisplayPort, чёрный",
+    "price": "68410.0",
+    "quantity": "41"
+  },
+  {
+    "category": "мониторы",
+    "name": "Монитор Viewsonic 35\" XG350R-C",
+    "image": "products_images/Viewsonic_35_XG350R-C.jpg",
+    "short_desc": "Изображение оживает",
+    "description": "35\", MVA, UltraWide, LED, 3440x1440, 3 мс, 100 Гц, AMD FreeSync, 2500:1, 178°/178°, 2xHDMI, DisplayPort, динамики, чёрный",
+    "price": "84400.0",
+    "quantity": "9"
+  },
+  {
+    "category": "мониторы",
+    "name": "Монитор Dell 34\" U3417W (3417-4886)",
+    "image": "products_images/Dell_34_U3417W.jpg",
+    "short_desc": "Погрузитесь в виртуальную реальность, реально! ",
+    "description": "34\", IPS, UltraWide, LED, 3440x1440, 8 мс, 1000:1, 178°/178°, 2xHDMI, DisplayPort, Mini DisplayPort, динамики, чёрный",
+    "price": "57050.0",
+    "quantity": "25"
+  }
+]

@@ -1,0 +1,18 @@
+{% extends 'authapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <form class="login_form" action="{% url 'auth:update' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ profile_form.as_p }}
+        <input class="form-control" type="submit" value="сохранить">
+
+        <button class="form-control">
+            <a class="on_index" href="{% url 'main:index' %}">
+                на главную
+            </a>
+        </button>
+    </form>
+    <div class="user_avatar"><img src="/media/{{ user.avatar }}"></div>
+{% endblock %}

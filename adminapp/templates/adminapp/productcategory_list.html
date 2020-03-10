@@ -1,0 +1,28 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+
+{% block container %}
+<div class="users_list">
+    <a href="{% url 'myadmin:productcategory_create' %}" class="delete_product">
+        новая категория
+    </a>
+    {% for object in object_list %}
+    <div class="user_record {% if not object.is_active %}not_active{% endif %}">
+        {{ object.name|title }}
+
+            <a href="{% url 'myadmin:productcategory_products' object.pk %}" class="delete_product">
+                товары категории
+            </a>
+            <a href="{% url 'myadmin:productcategory_update' object.pk %}" class="delete_product">
+                редактировать
+            </a>
+            <a href="{% url 'myadmin:productcategory_delete' object.pk %}" class="delete_product">
+                удалить
+            </a>
+        <div style="text-align: center">
+            {{ object.description }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

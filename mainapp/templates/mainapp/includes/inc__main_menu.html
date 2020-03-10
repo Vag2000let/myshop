@@ -1,0 +1,87 @@
+<div class="main_div">
+
+            <ul class="main_head">
+                <li class="li_main">
+                    <a href="{% url 'main:index' %}"
+                       class="{% if request.resolver_match.url_name == 'index' %}
+                       link_menu{% endif %}">
+                        Главная
+                    </a>
+                </li>
+                <li class="li_main">
+                    <a href="{% url 'main:catalog' %}"
+                       class="{% if request.resolver_match.url_name == 'catalog' %}
+                       link_menu{% endif %}">
+                        Каталог
+                    </a>
+                </li>
+                <li class="li_main">
+                    <a href="{% url 'main:contacts' %}"
+                       class="{% if request.resolver_match.url_name == 'contacts' %}
+                       link_menu{% endif %}">
+                        Контакты
+                    </a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="li_main">
+                    <div class="dropdown">
+                        <a href="" data-toggle="dropdown"
+                           class="{% if request.resolver_match.namespace == 'main' %}
+                                    link_menu
+                                  {% endif %}">
+                            {{ user.first_name|default:'Пользователь' }}
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'auth:update' %}">
+                                    профиль
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'ordersapp:orders_list' %}">
+                                    заказы
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {% endif %}
+                {% if user.is_superuser %}
+                    <li class="li_main">
+                        <a href="{% url 'myadmin:index' %}"
+                        class="{% if request.resolver_match.namespace == 'myadmin' %}
+                                   link_menu
+                               {% endif %}">
+                            Админка
+                        </a>
+                    </li>
+                {% endif %}
+                <li class="li_main">{% if user.is_authenticated %}
+                    <a href="{% url 'auth:logout' %}"
+                        class="{% if request.resolver_match.namespace == 'auth' %}
+                                   link_menu
+                               {% endif %}">
+                        Выйти
+                    </a>
+                    {% else %}
+                    <a href="{% url 'auth:login' %}"
+                        class="{% if request.resolver_match.namespace == 'auth' %}
+                                   link_menu
+                               {% endif %}">
+                        Войти
+                    </a>
+                    {% endif %}
+                </li>
+                <a href="{% url 'basket:index' %}" class="basket">
+                    {% if basket %}
+                        <span class="count_product">
+                            {{ basket.0.total_cost|floatformat:0 }} руб
+                            ({{ basket.0.total_quantity }} шт)
+                        </span>
+                    {% endif %}
+                </a>
+            </ul>
+
+{#{{ request.resolver_match.url_name }}#}
+</div>

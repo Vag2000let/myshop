@@ -1,0 +1,28 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block contacts %}
+{% for location in locations %}
+    <h3 class="h3_contacts">Контактный номер</h3>
+    <p>{{ location.phone }}</p>
+    <h3 class="h3_contacts">Email</h3>
+    <p>{{ location.email }}</p>
+    <h3 class="h3_contacts">Адрес</h3>
+    <p>{{ location.address }}</p>
+{% endfor %}
+
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aca28940ce12645b3d564c04c8d47dd3d9ec249faeff7474e7eef4a119347a60c&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+
+<h3 class="h3_contacts">Напишите нам</h3>
+
+<input type="text" size="30" placeholder="Ваше имя">
+<br>
+<input type="text" size="30" placeholder="example@mail.ru">
+
+<p>Тема</p>
+<input type="text" size="30" placeholder="Тема">
+
+<br>
+
+<textarea class="area" cols="30" rows="10"></textarea>
+{% endblock %}

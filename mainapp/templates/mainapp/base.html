@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head class="head">
+    <meta charset="UTF-8">
+    <title>{{ page_title|title }}</title>
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+              integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+              crossorigin="anonymous">
+    {% endblock %}
+    {% block js %}
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/basket_scripts.js' %}"></script>
+        <script src="{% static 'js/main_scripts.js' %}"></script>
+    {% endblock %}
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <a href="{% url 'main:index' %}"><img class="logo" src="{% static 'img/logo_1.png' %}" alt="logo" title="На главную"></a>
+        </div>
+{#        {% now "d/m/y" %}#}
+
+        <hr class="hr">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        <hr class="hr">
+
+        {% block menu_catalog %}
+
+        {% endblock %}
+
+        {% block body %}
+
+        {% endblock %}
+
+        {% block contacts %}
+
+        {% endblock %}
+
+        {% block notebook %}
+
+        {% endblock %}
+
+        {% block note %}
+
+        {% endblock %}
+
+        {% block footer %}
+        <div class="footer">
+            <div>
+                <p class="h3_footer" href="contacts.html">Контакты</p>
+            </div>
+            <div>
+                <p class="h3_footer">Полезная информация</p>
+            </div>
+            <div>
+                <p class="h3_footer">Оставайтесь на связи</p>
+                <p>Подписаться на новости и рассылки</p>
+                <input class="text_area" type="email" name="email" placeholder="Ваш email">
+                <a href="#">
+                    <i class="fas fa-paper-plane"></i>
+                </a>
+            </div>
+
+            <div class="copy">
+                <div>
+                    &copy; Все права защищены {% now "Y" %}
+                </div>
+                <div class="social-links">
+                    <a class="icon-link" href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="icon-link">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="icon-link">
+                        <i class="fab fa-google-plus-g"></i>
+                    </a>
+                    <a href="#" class="href"></a>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    </div>
+</body>
+
+</html>
