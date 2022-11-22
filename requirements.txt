@@ -11,7 +11,7 @@ django-debug-toolbar==2.0
 django==2.2.5
 idna==2.8                 # via requests
 oauthlib==3.1.0           # via requests-oauthlib, social-auth-core
-pillow==6.1.0
+pillow==9.3.0
 psycopg2==2.8.3
 pyjwt==1.7.1              # via social-auth-core
 python3-openid==3.1.0     # via social-auth-core
